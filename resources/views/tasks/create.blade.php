@@ -9,24 +9,32 @@
     <section id="create_task_section">
         <h1>Criar Tarefa</h1>
         <form>
-            <div class="input_area">
-                <label for="title">Título da tarefa</label>
-                <input id="title" name="title" type="text" placeholder="Digite o título da tarefa" required>
-            </div>
-            <div class="input_area">
-                <label for="due_date">Data de Realização</label>
-                <input id="due_date" name="due_date" type="date" required>
-            </div>
-            <div class="input_area">
-                <label for="category">Categoria</label>
-                <select id="category" name="category" required>
-                    <option selected disabled value>Selecione a categoria</option>
-                </select>
-            </div>
-            <div class="input_area">
-                <label for="description">Descrição da tarefa</label>
-                <textarea id="description" name="description" placeholder="Digite uma descrição para sua tarefa"></textarea>
-            </div>
+
+            <x-form.input label="Título da tarefa" name="title" placeholder="Digite o título da tarefa" required/>
+
+            <x-form.input label="Data de Realização" name="due_date" type="date" required/>
+
+            <x-form.select label="Categoria" name="category" required>
+                <option>Valor qualquer</option>
+            </x-form.select>
+
+            <x-form.textarea label="Descrição da tarefa" name="description" placeholder="Digite uma descrição para sua tarefa"/>
+
+            <x-form.optionsarea
+                :options="[
+                    [
+                        'class' => 'btn btn-primary',
+                        'type' => 'submit',
+                        'label' => 'Criar Tarefa'
+                    ],
+                    [
+                        'class' => 'btn',
+                        'type' => 'reset',
+                        'label' => 'Resetar'
+                    ]
+                ]"
+            />
+
         </form>
     </section>
 </x-layout>
