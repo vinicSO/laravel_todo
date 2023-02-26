@@ -9,6 +9,7 @@
         name="{{$name}}"
         type="text"
         placeholder="{{$placeholder ?? ''}}"
-        {{empty($required) ? '':'required'}}
+        value="{{empty($value) ? '' : $value}}"
+        {{empty($required) ? '' : 'required'}}
     />
 </div>

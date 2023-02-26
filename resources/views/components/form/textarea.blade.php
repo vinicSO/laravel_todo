@@ -8,6 +8,6 @@
         name="{{$name}}"
         placeholder="{{$placeholder ?? ''}}"
         {{empty($required) ? '':'required'}}
-    ></textarea>
+    >{{empty($value) ? '' : $value}}</textarea>
 
 </div>
