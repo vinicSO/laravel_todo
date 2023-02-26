@@ -11,8 +11,8 @@
             <div>{{$data['category'] ?? ''}}</div>
         </div>
         <div class="actions">
-            <a href="http://localhost:8000/tasks/edit/{{$data['id']}}"> <img src="/assets/images/icon-edit.png"></a>
-            <a href="http://localhost:8000/tasks/delete/{{$data['id']}}"> <img src="/assets/images/icon-delete.png"></a>
+            <a href="{{route('task.show', ['id' => $data['id']])}}"> <img src="/assets/images/icon-edit.png"></a>
+            <a href="#"> <img src="/assets/images/icon-delete.png"></a>
         </div>
     </div>
 @endif
