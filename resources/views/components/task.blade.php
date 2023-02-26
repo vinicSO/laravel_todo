@@ -12,7 +12,12 @@
         </div>
         <div class="actions">
             <a href="{{route('task.show', ['id' => $data['id']])}}"> <img src="/assets/images/icon-edit.png"></a>
-            <a href="#"> <img src="/assets/images/icon-delete.png"></a>
+
+            <form method="POST" action="{{route('task.delete', ['id' => $data['id']])}}">
+                @csrf
+
+                <button type="submit"> <img src="/assets/images/icon-delete.png"></button>
+            </form>
         </div>
     </div>
 @endif

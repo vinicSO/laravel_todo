@@ -200,17 +200,17 @@ h2 {
 }
 
 .actions {
-
     justify-content: flex-end;
 }
 
-.actions a {
+.actions a, button {
     margin-left: 10px;
     margin-right: 10px;
     transition: all .3s ease-in-out;
+    border: 0;
 }
 
-.actions a:hover {
+.actions a:hover, button:hover {
     transform: scale(1.3);
 }
 

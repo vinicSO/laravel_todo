@@ -69,4 +69,18 @@ class TaskController extends Controller
         return redirect(route('home'));
     }
 
+    public function delete(Request $request) {
+        $id = $request->id;
+
+        $task = Task::find($id);
+
+        if (!$task) {
+            return 'Erro: Task not found';
+        }
+
+        $task->delete();
+
+        return redirect(route('home'));
+    }
+
 }
