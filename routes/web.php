@@ -18,5 +18,7 @@ Route::post('/task/{id}/update', [TaskController::class, 'update'])->name('task.
 
 Route::post('/task/{id}/delete', [TaskController::class, 'delete'])->name('task.delete');
 
+Route::post('/task/{id}/toggle', [TaskController::class, 'toggle'])->name('task.toggle');
+
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::get('/register', [AuthController::class, 'register'])->name('register');

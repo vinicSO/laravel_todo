@@ -1,9 +1,17 @@
 @if($data ?? '')
     <div class="task">
         <div class="title">
-            <input type="checkbox"
-                   @if($data['is_done']) checked @endif
-            >
+            <form method="POST" action="{{route('task.toggle', ['id' => $data['id']])}}">
+                @csrf
+
+                <input
+                    type="checkbox"
+                    name="is_done"
+                    @if($data['is_done']) checked @endif
+                    onchange="this.form.submit()"
+                >
+            </form>
+
             <div class="title_label">{{$data['title'] ?? ''}}</div>
         </div>
         <div class="priority">

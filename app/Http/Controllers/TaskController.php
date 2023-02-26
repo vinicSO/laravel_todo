@@ -69,6 +69,21 @@ class TaskController extends Controller
         return redirect(route('home'));
     }
 
+    public function toggle(Request $request) {
+        $task = Task::find($request->id);
+
+        if (!$task) {
+            return 'Erro: Task not found';
+        }
+
+        $task->update([
+            'is_done' => !$task->is_done
+        ]);
+        $task->save();
+
+        return redirect(route('home'));
+    }
+
     public function delete(Request $request) {
         $id = $request->id;
 
