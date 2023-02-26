@@ -217,3 +217,41 @@ h2 {
     display: flex;
     align-items: center;
 }
+
+#create_task_section {
+    margin: auto;
+    padding-top: 20px;
+}
+
+#create_task_section h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.input_area {
+    display: block;
+    margin: 20px 10px 10px 10px;
+}
+
+.input_area label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input_area input, .input_area select {
+    height: 40px;
+    width: 400px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    padding: 5px 10px;
+}
+
+.input_area textarea {
+    height: 120px;
+    width: 400px;
+    max-width: 400px;
+    min-width: 400px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    padding: 5px 10px;
+}
